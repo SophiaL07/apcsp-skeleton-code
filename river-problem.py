@@ -2,11 +2,31 @@ import copy
 
 # Define a function that takes in a state as a dictionary and returns True if the state meets the conditions and False if it does not
 def isValid(state):
+    if state["wolf"] == state["goat"] and state["wolf"] != state["person"]:
+        return False
+    elif state["goat"] == state["cabbage"] and state["goat"] != state["person"]:
+        return False
+    else:
+        return True
     
 
 # Define a function that takes in a state as a dictionary and returns a list of all valid states that can be reached from 1 move of the input state
 # This function will need to call the function isValid(state)
 def get_next_states(state):
+    next_state = []
+    same_state = []
+
+    for key in state:
+        #if state[key] == True/False
+            #append key to same side list
+    
+    #loop through same side
+    #make a new state that is one move away with each thing on the same side
+    #check validity
+    #if valid, append to next_states
+    
+    return next_states
+
 
 
 # Define a recursive function that takes in a current_state and win_state and returns the path to those states using the Depth First Search algorithm
